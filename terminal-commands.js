@@ -9,3 +9,19 @@ module.exports.ls = () => {
         console.log(filesToString);
     });
 };
+
+module.exports.touch = () => {
+    //create touch here
+    fs.writeFile('./user.txt', { flag: 'wx'},  (err) => {
+        if (err) throw err;
+        console.log("Saved!");
+    });
+};
+
+module.exports.mkdir = () => {
+    //create mkdir here
+    fs.mkdir('./check', (err) => {
+        if (err) throw err;
+        console.log("Directory created!");
+    });
+};
